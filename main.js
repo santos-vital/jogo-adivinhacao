@@ -9,11 +9,7 @@ let xAttempts = 1;
 // Eventos
 btnTry.addEventListener('click', handleTryClick);
 btnReset.addEventListener('click', handleResetClick);
-document.addEventListener('keydown', function(e) {
-  if(e.key == 'Enter' && screen1.classList.contains('hide')) {
-    handleResetClick();
-  }
-})
+document.addEventListener('keydown', keyEnter);
 
 // Função callback
 function handleTryClick(event) {
@@ -40,4 +36,10 @@ function handleResetClick() {
 function toggleScreen() {
   screen1.classList.toggle("hide");
   screen2.classList.toggle("hide");  
+}
+
+function keyEnter(e) {
+  if(e.key == 'Enter' && screen1.classList.contains('hide')) {
+    handleResetClick();
+  }
 }

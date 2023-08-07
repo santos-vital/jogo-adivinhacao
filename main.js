@@ -23,6 +23,10 @@ function handleTryClick(event) {
     document.querySelector(".screen2 h2").innerText = `acertou em ${xAttempts} tentativas`;
   }
 
+  if(Number(inputNumber.value) > 10 || Number(inputNumber.value) < 0) {
+    alert("Número inválido, digite somente números entre 0 e 10!");
+  }
+
   inputNumber.value = "";
   xAttempts++;
 }

@@ -27,8 +27,11 @@ function handleTryClick(event) {
     alert("Número inválido, digite somente números entre 0 e 10!");
   }
 
+  if(inputNumber.value != "") {
+    xAttempts++;
+  }
+
   inputNumber.value = "";
-  xAttempts++;
 }
 
 function handleResetClick() {
